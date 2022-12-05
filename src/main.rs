@@ -2,9 +2,12 @@
 use day1::{day1_part1, day1_part2};
 use day2::{day2_part1, day2_part2};
 use day3::{day3_part1, day3_part2};
+use day4::{day4_part1, day4_part2};
 mod day1;
 mod day2;
 mod day3;
+mod day4;
+
 fn main() {
     // Day1
     println!("Day 1");
@@ -18,4 +21,8 @@ fn main() {
     println!("Day 3");
     println!("day3 part 1 = {}", day3_part1().unwrap());
     println!("day3 part 2 = {}", day3_part2().unwrap());
+    // Day4
+    println!("Day 4");
+    println!("day4 part 1 = {}", day4_part1().unwrap());
+    println!("day4 part 2 = {}", day4_part2().unwrap());
 }
