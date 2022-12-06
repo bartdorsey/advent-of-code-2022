@@ -1,7 +1,7 @@
 use anyhow::Result;
 use std::{fs, vec};
 
-pub fn day4_part1() -> Result<u32> {
+pub fn part1() -> Result<u32> {
     let contents = fs::read_to_string("data/day4-input.txt").unwrap();
     let count = contents
         .lines()
@@ -21,7 +21,7 @@ pub fn day4_part1() -> Result<u32> {
     Ok(count)
 }
 
-pub fn day4_part2() -> Result<u32> {
+pub fn part2() -> Result<u32> {
     let mut count = 0;
     let contents = fs::read_to_string("data/day4-input.txt").unwrap();
     let lines = contents.lines();

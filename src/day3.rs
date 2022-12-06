@@ -1,7 +1,7 @@
 use anyhow::Result;
 use std::{collections::HashSet, fs};
 
-pub fn day3_part1() -> Result<u32> {
+pub fn part1() -> Result<u32> {
     let contents = fs::read_to_string("data/day3-input.txt").unwrap();
     let mut sum = 0;
     for line in contents.lines() {
@@ -26,7 +26,7 @@ pub fn day3_part1() -> Result<u32> {
     Ok(sum)
 }
 
-pub fn day3_part2() -> Result<u32> {
+pub fn part2() -> Result<u32> {
     let contents = fs::read_to_string("data/day3-input.txt").unwrap();
     let mut sum = 0;
     for [chunk1, chunk2, chunk3] in contents.lines().array_chunks() {

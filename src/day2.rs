@@ -1,3 +1,4 @@
+use anyhow::Result;
 use std::fs;
 
 const WIN_SCORE: u32 = 6;
@@ -20,8 +21,8 @@ const LOSE: &str = "X";
 const DRAW: &str = "Y";
 const WIN: &str = "Z";
 
-pub fn day2_part1() -> u32 {
-    let contents = fs::read_to_string("data/day2-input.txt").unwrap();
+pub fn part1() -> Result<u32> {
+    let contents = fs::read_to_string("data/day2-input.txt")?;
     let rounds = contents.lines();
     let mut score = 0;
     for round in rounds {
@@ -44,11 +45,11 @@ pub fn day2_part1() -> u32 {
             _ => LOSE_SCORE,
         };
     }
-    score
+    Ok(score)
 }
 
-pub fn day2_part2() -> u32 {
-    let contents = fs::read_to_string("data/day2-input.txt").unwrap();
+pub fn part2() -> Result<u32> {
+    let contents = fs::read_to_string("data/day2-input.txt")?;
     let rounds = contents.lines();
     let mut score = 0;
     for round in rounds {
@@ -86,5 +87,5 @@ pub fn day2_part2() -> u32 {
             _ => 0,
         };
     }
-    score
+    Ok(score)
 }
